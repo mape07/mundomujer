@@ -1,1 +1,109 @@
-
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>El Mundo de la Mujer | Cabello, maquillaje y rostro</title>
+  <meta name="description" content="El Mundo de la Mujer. Maquillaje, cuidado del cabello y productos para el rostro. Pide por WhatsApp." />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root{--rose:#c45c74;--blush:#f7ecee;--ink:#2b2226;--gold:#b08968}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:Outfit,system-ui,sans-serif;background:var(--blush);color:var(--ink);line-height:1.55}
+    a{color:inherit;text-decoration:none} img{max-width:100%;display:block}
+    .wrap{width:min(1080px,calc(100% - 32px));margin-inline:auto}
+    header{position:sticky;top:0;z-index:20;background:rgba(255,250,250,.92);backdrop-filter:blur(8px);border-bottom:1px solid #f0dfe3}
+    .nav{min-height:70px;display:flex;align-items:center;justify-content:space-between}
+    .brand{font-family:"Cormorant Garamond",serif;font-size:28px;font-weight:700}
+    .links{display:flex;gap:18px;font-size:14px}
+    .btn{display:inline-flex;border:0;border-radius:999px;padding:12px 18px;font-weight:650;font-family:inherit;cursor:pointer}
+    .btn-r{background:var(--rose);color:#fff}
+    .btn-wa{background:#25D366;color:#fff}
+    .hero{display:grid;grid-template-columns:1.05fr .95fr;gap:28px;align-items:center;padding:48px 0}
+    .kicker{letter-spacing:2px;font-size:12px;color:var(--rose);font-weight:700;text-transform:uppercase}
+    h1{font-family:"Cormorant Garamond",serif;font-size:clamp(40px,6vw,64px);line-height:.95;margin:8px 0 12px}
+    .hero img{height:420px;width:100%;object-fit:cover;border-radius:24px}
+    .card{background:#fff;border-radius:20px;padding:20px;margin-top:18px}
+    label{display:block;font-size:13px;font-weight:600;margin:10px 0 5px}
+    input,select{width:100%;border:1px solid #eddde1;border-radius:12px;padding:11px;font:inherit;background:#fffafb}
+    section{padding:56px 0}
+    .head{text-align:center;margin-bottom:24px}
+    .head h2{font-family:"Cormorant Garamond",serif;font-size:42px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .svc{background:#fff;border-radius:20px;overflow:hidden}
+    .svc img{height:190px;width:100%;object-fit:cover}
+    .svc div{padding:16px}
+    .svc p{color:#6d5c62;font-size:14px}
+    footer{background:#2b2226;color:#f3e6ea;padding:28px 0;font-size:14px}
+    .foot{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    .wa{position:fixed;right:16px;bottom:16px;width:54px;height:54px;border-radius:50%;background:#25D366;color:#fff;display:grid;place-items:center;font-size:24px}
+    @media(max-width:860px){.links{display:none}.hero,.grid{grid-template-columns:1fr}.hero img{height:240px}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#inicio">El Mundo de la Mujer</a>
+      <nav class="links">
+        <a href="#cabello">Cabello</a>
+        <a href="#makeup">Maquillaje</a>
+        <a href="#rostro">Rostro</a>
+      </nav>
+      <a class="btn btn-r" href="#pedir">Pedir</a>
+    </div>
+  </header>
+  <section class="hero wrap" id="inicio">
+    <div>
+      <div class="kicker">Cabello · Maquillaje · Rostro</div>
+      <h1>Todo para verte como quieres.</h1>
+      <p>Labiales, bases, paletas, shampoo, tratamientos y cremas. Pide por WhatsApp y te confirmamos el que hay en tienda.</p>
+      <form class="card" id="leadForm">
+        <label for="nombre">Nombre</label>
+        <input id="nombre" required placeholder="Tu nombre">
+        <label for="telefono">WhatsApp</label>
+        <input id="telefono" required placeholder="300 000 0000">
+        <label for="busca">Qué buscas</label>
+        <select id="busca">
+          <option>Maquillaje</option>
+          <option>Cabello</option>
+          <option>Cuidado del rostro</option>
+          <option>Kit de regalo</option>
+        </select>
+        <button class="btn btn-r" type="submit" style="width:100%;margin-top:14px">Consultar disponibilidad</button>
+      </form>
+    </div>
+    <img src="img/maquillaje.jpg" alt="Maquillaje El Mundo de la Mujer">
+  </section>
+  <section id="makeup">
+    <div class="wrap">
+      <div class="head"><h2>Lo que encuentras</h2></div>
+      <div class="grid">
+        <article class="svc" id="cabello"><img src="img/cabello.jpg" alt="Productos de cabello"><div><h3>Cabello</h3><p>Shampoo, tratamiento, aceite, moñas y secador. Para liso, ondulado o teñido.</p></div></article>
+        <article class="svc"><img src="img/maquillaje.jpg" alt="Maquillaje"><div><h3>Maquillaje</h3><p>Base, corrector, rubor, paleta de ojos y labial. Tonos para el día y la noche.</p></div></article>
+        <article class="svc" id="rostro"><img src="img/rostro.jpg" alt="Cuidado del rostro"><div><h3>Rostro</h3><p>Crema, sérum e hidratante. Rutina simple, sin prometer resultados médicos.</p></div></article>
+      </div>
+    </div>
+  </section>
+  <section id="pedir" style="text-align:center">
+    <div class="wrap">
+      <h2 style="font-family:'Cormorant Garamond',serif;font-size:40px">¿No ves el tono?</h2>
+      <p style="margin:8px 0 16px">Escríbenos el producto y te decimos si está.</p>
+      <a class="btn btn-wa" href="https://wa.me/573001112233?text=Hola%2C%20quiero%20un%20producto%20de%20El%20Mundo%20de%20la%20Mujer" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </section>
+  <footer>
+    <div class="wrap foot">
+      <div><strong>El Mundo de la Mujer</strong><br>Cabello, maquillaje y rostro</div>
+      <div>Precio al confirmar. Cambios si el producto llega sellado. Datos solo para el pedido (Ley 1581). Cambia el 300 111 2233.</div>
+    </div>
+  </footer>
+  <a class="wa" href="https://wa.me/573001112233?text=Hola%2C%20quiero%20un%20producto%20de%20El%20Mundo%20de%20la%20Mujer" target="_blank" rel="noopener">✆</a>
+  <script>
+    document.getElementById('leadForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      const t = encodeURIComponent('Hola, soy '+document.getElementById('nombre').value.trim()+'. Busco en El Mundo de la Mujer: '+document.getElementById('busca').value+'. WhatsApp: '+document.getElementById('telefono').value.trim());
+      window.open('https://wa.me/573001112233?text='+t,'_blank');
+    });
+  </script>
+</body>
+</html>
